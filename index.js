@@ -24,7 +24,7 @@
 //   }
 // }
 
-class BinaryTreeNode {
+class LinkedListNode {
   constructor(value) {
     // adding value, left, right properties through the constructor
     this.value = value;
