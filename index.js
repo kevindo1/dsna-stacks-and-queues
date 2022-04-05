@@ -26,31 +26,19 @@
 
 class LinkedListNode {
   constructor(value) {
-    // adding value, left, right properties through the constructor
+    // adding value and next properties through the constructor
     this.value = value;
-    this.left = null;
-    this.right = null;
+    this.next;
   }
 
   add(node) {
     // Is there a next property?
-    if (!this.left) {
-      // if no, then this right node can be our next
-      this.right = node;
+    if (!this.next) {
+      // if no, then this next node can be our next
+      this.next = node;
     } else {
       // if yes, then go to current next node
-      this.left.add(node);
+      this.next.add(node);
     }
   }
 }
-
-// Test Cases
-const B = new BinaryTreeNode('B');
-const A = new BinaryTreeNode('A');
-const C = new BinaryTreeNode('C');
-const D = new BinaryTreeNode('D');
-
-// B will be the root of the tree:
-B.add(A);
-B.add(D);
-B.add(C);
